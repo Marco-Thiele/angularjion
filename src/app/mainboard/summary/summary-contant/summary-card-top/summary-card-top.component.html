@@ -1,0 +1,15 @@
+<div class="position-contant">
+    @for (count of [1,2]; track $index) {
+    <div class="card">
+        <div>
+            <img *ngIf="count == 1" src="../../../../../assets/img/pen.png" alt="">
+            <img *ngIf="count !== 1" src="../../../../../assets/img/hook.png" alt="">
+        </div>
+        <div>
+            <div class="number">1</div>
+            <div class="text" *ngIf="count == 1">To-do</div>
+            <div class="text" *ngIf="count !== 1">Done</div>
+        </div>
+    </div>
+    }
+</div>

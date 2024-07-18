@@ -1,0 +1,14 @@
+<div class="position-contant">
+    @for (count of [1,2,3]; track $index) {
+        <div class="card">
+            <div *ngIf="count==1" class="number">5</div>
+            <div *ngIf="count==2" class="number">2</div>
+            <div *ngIf="count==3" class="number">2</div>
+            <div *ngIf="count==1" class="text">Task in Board</div>
+            <div *ngIf="count==2" class="text">Task in Progress</div>
+            <div *ngIf="count==3" class="text">Awaiting Feedback</div>
+        </div>  
+    }
+</div>
+
+

@@ -1,0 +1,124 @@
+header {
+    position: fixed;
+    top: -4px;
+    right: 0px;
+    left: 230px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    padding-left: 123px;
+    height: 89px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+}
+
+.profile-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 26px;
+    width: 106px;
+    height: 49px;
+    cursor: pointer;
+}
+
+#profile-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    width: 43px;
+    height: 43px;
+    border: 3px solid;
+    color: white;
+
+}
+
+nav {
+    position: fixed;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 66px;
+    width: 230px;
+    left: 0px;
+    top: 0px;
+    bottom: 0px;
+    background: #2A3647;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
+    z-index: 2;
+    color: white;
+}
+
+.menu-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 15px;
+    width: 230px;
+    height: 230px;
+    margin-top: 60px;
+    & a {
+        text-decoration: none;
+    }
+
+    & p {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 120%;
+        color: #CDCDCD;
+        width: 80px;
+    }
+}
+
+.nav-menu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    width: 230px;
+    height: 46px;
+    justify-content: center;
+
+
+    &:hover {
+        background-color: #0919317c;
+        cursor: pointer;
+    }
+
+    &:active {
+        background-color: #091931;
+    }
+}
+
+.nav-menu-active{
+    background-color: #091931;
+}
+
+.legal-notice-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 112.03px;
+    width: 232px;
+    height: 46px;
+}
+
+.position-contant{
+    position: absolute;
+    top: 89px;
+    left: 230px;
+    right: 0;
+    bottom: 0;
+    background-color: #F6F7F8;
+}

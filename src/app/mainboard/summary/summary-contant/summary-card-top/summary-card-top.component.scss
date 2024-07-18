@@ -1,0 +1,23 @@
+.position-contant{
+    display: flex;
+    justify-content: space-between;
+    gap: 18px;
+}
+
+.card{
+    background-color: white;
+    border-radius: 30px;
+    padding: 38px 58px 38px 58px;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.number{
+    font-size: 64px;
+    font-weight: 600;
+}
+
+.text{
+    font-size: 20px;
+}

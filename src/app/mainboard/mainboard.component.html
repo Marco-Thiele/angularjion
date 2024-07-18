@@ -1,0 +1,57 @@
+<header class="header">
+    <div class="logo-img-small">
+        <!-- <img src="assets/img/join-small.svg"> -->
+    </div>
+    <h3 id="kanban">Kanban Project Managment Tool</h3>
+    <div class="profile-container" id="profile-container">
+        <a href="help.html"><img src="assets/img/help-icon.png"></a>
+        <div id="profile-img" onclick="showLogOut()">
+            <img src="assets/img/profile-icon.png">
+        </div>
+    </div>
+</header>
+
+<nav>
+    <div><img src="../../assets/img/Logo.png" alt=""></div>
+    <div class="menu-container">
+        <div (click)="changeActive('summary')" class="nav-menu" [ngClass]="{'nav-menu-active': active == 'summary'}" id="summary">
+            <img class="img-small" src="../../assets/img/summary-icon.png">
+            <p class="text-small">Summary</p>
+        </div>
+        <div (click)="changeActive('board')" class="nav-menu" [ngClass]="{'nav-menu-active': active == 'board'}" id="board">
+            <img class="img-small" src="../../assets/img/board-icon.png">
+            <p class="text-small">Board</p>
+        </div>
+        <div (click)="changeActive('addTask')" class="nav-menu" [ngClass]="{'nav-menu-active': active == 'addTask'}" id="addTask">
+            <img class="img-small" src="../../assets/img/add-task-icon.png">
+            <p class="text-small">Add Task</p>
+        </div>
+        <div (click)="changeActive('contacts')" class="nav-menu" [ngClass]="{'nav-menu-active': active == 'contacts'}" id="contacts">
+            <img class="img-small" src="../../assets/img/contacts-icon.png">
+            <p class="text-small">Contacts</p>
+        </div>
+    </div>
+    <div class="legal-notice-container">
+        <div>Privacy Policy</div>
+        <div>Legal Notice</div>
+    </div>
+
+</nav>
+
+<div class="position-contant">
+    @switch (active) {
+        @case ("summary") {
+            <app-summary></app-summary>
+        }
+        @case ("board") {
+            <app-board></app-board>
+        }
+        @case ("addTask") {
+            <app-add-task></app-add-task>
+        }
+        @case ("contacts") {
+            <app-contacts></app-contacts>
+        }
+    }
+</div>
+
