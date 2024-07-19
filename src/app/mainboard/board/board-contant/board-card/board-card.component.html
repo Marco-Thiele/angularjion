@@ -1,7 +1,7 @@
 <div class="card" *ngIf="allCards.length >=1 ">
-    <div>{{allCards[0]['category']}}</div>
-    <div>{{allCards[0]['headliner']}}</div>
-    <div>{{allCards[0]['text']}}</div>
+    <div class="category">{{allCards[0]['category']}}</div>
+    <div class="headliner">{{allCards[0]['headliner']}}</div>
+    <div class="text">{{allCards[0]['text']}}</div>
     <div>Subtasks:{{allCards[0]['subtasks'].length}}</div>
     <div class="card-bottom">
         <div>{{allCards[0]['assignedTo'].length}}</div>

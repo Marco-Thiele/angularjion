@@ -1,28 +1,47 @@
 <div class="position-conatant">
     <div>
         <div class="position-header"> 
-            <div>To do</div>
+            <div class="text">To do</div>
             <div><img src="../../../../assets/img/plus-button.png" alt=""></div>
         </div>
-        <div>test</div>
+        @for (card of allCards; track $index) {
+            @if (allCards[0]['status'] == 'To do') {
+                <app-board-card></app-board-card>
+            }
+        }
     </div>
     <div>
         <div class="position-header"> 
-            <div>In progress</div>
+            <div class="text">In progress</div>
             <div><img src="../../../../assets/img/plus-button.png" alt=""></div>
         </div>
+        @for (card of allCards; track $index) {
+            @if (allCards[0]['status'] == 'In progress') {
+                <app-board-card></app-board-card>
+            }
+        }
     </div>
     <div>
         <div class="position-header"> 
-            <div>Awaiting feedback</div>
+            <div class="text">Awaiting feedback</div>
             <div><img src="../../../../assets/img/plus-button.png" alt=""></div>
         </div>
+        @for (card of allCards; track $index) {
+            @if (allCards[0]['status'] == 'Awaiting feedback') {
+                <app-board-card></app-board-card>
+            }
+        }
     </div>
     <div>
         <div class="position-header"> 
-            <div>Done</div>
+            <div class="text">Done</div>
             <div><img src="../../../../assets/img/plus-button.png" alt=""></div>
         </div>
-        <app-board-card></app-board-card>
+        @for (card of allCards; track $index) {
+            @if (allCards[0]['status'] == 'Done') {
+                <app-board-card></app-board-card>
+            }
+        }
+
     </div>
 </div>

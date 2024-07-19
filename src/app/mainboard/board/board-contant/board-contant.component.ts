@@ -12,13 +12,13 @@ import { BoardCardComponent } from './board-card/board-card.component';
 export class BoardContantComponent {
 
   databank= inject(DatabankService)
- 
+  allCards=this.databank.allCards
   constructor(){
     this.onload()
   }
 
   onload(){
-    console.log('databank',this.databank)
+    console.log('databank',this.allCards)
   }
 
 }
