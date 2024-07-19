@@ -1,12 +1,24 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { DatabankService } from '../../../databank.service';
+import { BoardCardComponent } from './board-card/board-card.component';
 
 @Component({
   selector: 'app-board-contant',
   standalone: true,
-  imports: [],
+  imports: [BoardCardComponent],
   templateUrl: './board-contant.component.html',
   styleUrl: './board-contant.component.scss'
 })
 export class BoardContantComponent {
+
+  databank= inject(DatabankService)
+ 
+  constructor(){
+    this.onload()
+  }
+
+  onload(){
+    console.log('databank',this.databank)
+  }
 
 }
