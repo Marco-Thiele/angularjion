@@ -5,8 +5,8 @@
             <div><img src="../../../../assets/img/plus-button.png" alt=""></div>
         </div>
         @for (card of allCards; track $index) {
-            @if (allCards[0]['status'] == 'To do') {
-                <app-board-card></app-board-card>
+            @if (card['status'] == 'To do') {
+                <app-board-card [card]="card" ></app-board-card>
             }
         }
     </div>
@@ -16,8 +16,8 @@
             <div><img src="../../../../assets/img/plus-button.png" alt=""></div>
         </div>
         @for (card of allCards; track $index) {
-            @if (allCards[0]['status'] == 'In progress') {
-                <app-board-card></app-board-card>
+            @if (card['status'] == 'In progress') {
+                <app-board-card [card]="card"></app-board-card>
             }
         }
     </div>
@@ -27,8 +27,8 @@
             <div><img src="../../../../assets/img/plus-button.png" alt=""></div>
         </div>
         @for (card of allCards; track $index) {
-            @if (allCards[0]['status'] == 'Awaiting feedback') {
-                <app-board-card></app-board-card>
+            @if (card['status'] == 'Awaiting feedback') {
+                <app-board-card [card]="card"></app-board-card>
             }
         }
     </div>
@@ -38,8 +38,8 @@
             <div><img src="../../../../assets/img/plus-button.png" alt=""></div>
         </div>
         @for (card of allCards; track $index) {
-            @if (allCards[0]['status'] == 'Done') {
-                <app-board-card></app-board-card>
+            @if (card['status'] == 'Done') {
+                <app-board-card [card]="card"></app-board-card>
             }
         }
 

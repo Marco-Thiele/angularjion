@@ -1,15 +1,19 @@
-<div class="card" *ngIf="allCards.length >=1 ">
-    <div class="category">{{allCards[0]['category']}}</div>
-    <div class="headliner">{{allCards[0]['headliner']}}</div>
-    <div class="text">{{allCards[0]['text']}}</div>
-    <div>Subtasks:{{allCards[0]['subtasks'].length}}</div>
-    <div class="card-bottom">
-        <div>{{allCards[0]['assignedTo'].length}}</div>
-        <div>
-            <img *ngIf="allCards[0]['priority']== 'low' " src="../../../../../assets/img/low2.png" alt="">
-            <img *ngIf="allCards[0]['priority']== 'mid' " src="../../../../../assets/img/mid2.png" alt="">
-            <img *ngIf="allCards[0]['priority']== 'Urgent' " src="../../../../../assets/img/urgent2.png" alt="">
-            
+
+
+
+    <div class="card" *ngIf="allCards.length >=1 ">
+        <div class="category">{{card['category']}}</div>
+        <div class="headliner">{{card['headliner']}}</div>
+        <div class="text">{{card['text']}}</div>
+        <div>Subtasks:{{card['subtasks'].length}}</div>
+        <div class="card-bottom">
+            <div>{{card['assignedTo'].length}}</div>
+            <div>
+                <img *ngIf="card['priority']== 'low' " src="../../../../../assets/img/low2.png" alt="">
+                <img *ngIf="card['priority']== 'mid' " src="../../../../../assets/img/mid2.png" alt="">
+                <img *ngIf="card['priority']== 'Urgent' " src="../../../../../assets/img/urgent2.png" alt="">
+            </div>
         </div>
     </div>
-</div>
+
+

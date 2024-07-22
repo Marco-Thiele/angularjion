@@ -1,11 +1,12 @@
 import { Component, inject } from '@angular/core';
 import { DatabankService } from '../../../databank.service';
 import { BoardCardComponent } from './board-card/board-card.component';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-board-contant',
   standalone: true,
-  imports: [BoardCardComponent],
+  imports: [BoardCardComponent, CommonModule],
   templateUrl: './board-contant.component.html',
   styleUrl: './board-contant.component.scss'
 })
