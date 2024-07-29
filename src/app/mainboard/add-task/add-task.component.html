@@ -1,1 +1,62 @@
-<p>add-task works!</p>
+<div class="padding">
+    <h1>Add Tasks</h1>
+    <!-- <form action="" method="post"> -->
+        <div class="position-contant">
+            <div class="left-contant">
+                <div>
+                    <div class="text">Title</div>
+                    <div>
+                        <input type="text" placeholder="Enter a title">
+                    </div>
+                </div>
+                <div>
+                    <div class="text">Description</div>
+                    <div>
+                        <textarea name="" id="" placeholder="Enter a description"></textarea>
+                    </div>
+                </div>
+                <div>
+                    <div class="text">Assigned to</div>
+                    <div>
+                        <input type="text" placeholder="Select contacts to assign">
+                    </div>
+                </div>
+            </div>
+            <div class="mid-contant">
+                <img src="../../../assets/img/addTask-separate.png" alt="">
+            </div>
+            <div class="right-contant">
+                <div>
+                    <div class="text">Due date</div>
+                    <div>
+                        <input type="text" placeholder="dd/mm/yyyy">
+                    </div>
+                </div>
+                <div>
+                    <div class="text">Prio</div>
+                    <div class="prio">
+                        <div><button (click)="setPrio('urgent')" [ngClass]="{'urgent-active': prio == 'urgent'}">Urgent <img src="../../../assets/img/urgent2.png" alt=""></button></div>
+                        <div><button (click)="setPrio('mid')" [ngClass]="{'mid-active': prio == 'mid'}">Medium <img src="../../../assets/img/mid2.png" alt=""></button></div>
+                        <div><button (click)="setPrio('low')" [ngClass]="{'low-active': prio == 'low'}">Low <img src="../../../assets/img/low2.png" alt=""></button></div>
+                    </div>
+                </div>
+                <div>
+                    <div class="text">Category</div>
+                    <div>
+                        <input type="text" placeholder="Select task category">
+                    </div>
+                </div>
+                <div>
+                    <div class="text">Subtasks</div>
+                    <div>
+                        <input type="text"
+                        placeholder="Add new subtask">
+                    </div>
+                    <div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+   <!--  </form> -->
+</div>

@@ -17,7 +17,7 @@ import { RouterOutlet } from '@angular/router';
 })
 export class MainboardComponent {
 
-  active:string = 'board'
+  active:string = 'addTask'
 
   changeActive(active:string){
     this.active = active
