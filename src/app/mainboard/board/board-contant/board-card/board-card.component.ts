@@ -13,7 +13,7 @@ import { BoardContantComponent } from '../board-contant.component';
 export class BoardCardComponent {
 
   databank= inject(DatabankService)
-  allCards=this.databank.allCards
+  allCards=this.databank.allCard
   @Input()card:any 
   
   constructor(){

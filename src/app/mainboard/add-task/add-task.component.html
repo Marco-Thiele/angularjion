@@ -6,13 +6,13 @@
                 <div>
                     <div class="text">Title</div>
                     <div>
-                        <input type="text" placeholder="Enter a title">
+                        <input [(ngModel)]="title" type="text" placeholder="Enter a title">
                     </div>
                 </div>
                 <div>
                     <div class="text">Description</div>
                     <div>
-                        <textarea name="" id="" placeholder="Enter a description"></textarea>
+                        <textarea [(ngModel)]="description" type="text" name="" id="" placeholder="Enter a description"></textarea>
                     </div>
                 </div>
                 <div>
@@ -35,15 +35,15 @@
                 <div>
                     <div class="text">Prio</div>
                     <div class="prio">
-                        <div><button (click)="setPrio('urgent')" [ngClass]="{'urgent-active': prio == 'urgent'}">Urgent <img src="../../../assets/img/urgent2.png" alt=""></button></div>
-                        <div><button (click)="setPrio('mid')" [ngClass]="{'mid-active': prio == 'mid'}">Medium <img src="../../../assets/img/mid2.png" alt=""></button></div>
-                        <div><button (click)="setPrio('low')" [ngClass]="{'low-active': prio == 'low'}">Low <img src="../../../assets/img/low2.png" alt=""></button></div>
+                        <div><button (click)="setPrio('Urgent')" [ngClass]="{'urgent-active': prio == 'Urgent'}">Urgent <img src="../../../assets/img/urgent2.png" alt=""></button></div>
+                        <div><button (click)="setPrio('Medium')" [ngClass]="{'mid-active': prio == 'Medium'}">Medium <img src="../../../assets/img/mid2.png" alt=""></button></div>
+                        <div><button (click)="setPrio('Low')" [ngClass]="{'low-active': prio == 'Low'}">Low <img src="../../../assets/img/low2.png" alt=""></button></div>
                     </div>
                 </div>
                 <div>
                     <div class="text">Category</div>
                     <div>
-                        <input type="text" placeholder="Select task category">
+                        <input  [(ngModel)]="category" type="text" placeholder="Select task category">
                     </div>
                 </div>
                 <div>
@@ -53,7 +53,14 @@
                         placeholder="Add new subtask">
                     </div>
                     <div>
-
+                        <div>
+                            <div>
+                                <button (click)="clear()">Clear</button>
+                            </div>
+                            <div>
+                                <button (click)="createTask()">CreateTask</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

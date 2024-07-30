@@ -1,5 +1,5 @@
 import { inject, Injectable } from '@angular/core';
-import { Firestore, collection, onSnapshot, doc, DocumentData } from '@angular/fire/firestore';
+import { Firestore, collection, onSnapshot, doc, addDoc, updateDoc } from '@angular/fire/firestore';
 
 
 @Injectable({
@@ -19,8 +19,8 @@ export class DatabankService {
   card:any
 
   cardData: any
-  allCards:any[]= []
-
+  allCard:any[]= []
+  j:number = 0;
 
   
   unsub;
@@ -28,21 +28,23 @@ export class DatabankService {
     this.unsub = onSnapshot(this.getSingleRef('Join', 'CsMquSkemzl6W3yKoWyu'), (doc) =>{
         this.cardData =doc.data()
      console.log(this.cardData)
+     this.allCard= [];
       for (let i = 0; i < this.cardData.allCards.length; i++) {
           let card = this.cardData.allCards[i]
           this.card ={
-            assignedTo: card['card']['assignetTo'],
-            category: card['card']['category'],
-            date: card['card']['date'],
-            headliner: card['card']['headliner'],
-            priority: card['card']['priority'],
-            subtasks:card['card']['subTasks'],
-            text: card['card']['text'],
-            status:card['card']['status']
+            assignedTo: card['assignetTo'],
+            category: card['category'],
+            date: card['date'],
+            headliner: card['headliner'],
+            priority: card['priority'],
+            subtasks:card['subTasks'],
+            text: card['text'],
+            status:card['status']
           }
-          this.allCards.push(this.card)
+          this.allCard.push(this.card);
+          this.j=i+1
         }
-        console.log('allCards',this.allCards) 
+        console.log('allCards',this.allCard, this.j) 
     
     })
     
@@ -55,5 +57,9 @@ export class DatabankService {
 
    getSingleRef(colId:string, docId:string){
     return doc(collection(this.firestore, colId), docId);
+   }
+
+  async addCard(item:any){
+    await updateDoc(this.getSingleRef('Join', 'CsMquSkemzl6W3yKoWyu'),item)
    }
 }

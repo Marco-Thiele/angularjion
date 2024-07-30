@@ -13,7 +13,7 @@ import { CommonModule } from '@angular/common';
 export class BoardContantComponent {
 
   databank= inject(DatabankService)
-  allCards=this.databank.allCards
+  allCards=this.databank.allCard
   constructor(){
     this.onload()
   }
